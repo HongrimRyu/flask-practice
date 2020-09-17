@@ -1,8 +1,8 @@
-from flask import app, Blueprint
+from flask import app, Blueprint, render_template
 
-bp = Blueprint('base', __name__, url_prefix='/base')
+bp = Blueprint('base', __name__, url_prefix='/')
 
 
 @bp.route('/')
-def auth_base_view():
-    return 'auth'
+def base_view():
+    return render_template('base.html')
